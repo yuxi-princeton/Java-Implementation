@@ -43,7 +43,7 @@ public class FeatureMapVisualizer {
                 // image[i * n + j] = 64 + 2 * output[0][i][j];
                 StdOut.print(paddedInput1[0][i][j]);
                 StdOut.print("  ");
-                image[i * n + j] = (int) (paddedInput1[0][i][j] * 256);
+                image[i * n + j] = 255 - (int) (2 * paddedInput1[0][i][j]);
             }
             StdOut.println();
         }
