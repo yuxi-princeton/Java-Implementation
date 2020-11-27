@@ -32,10 +32,10 @@ public class NPUmodel {
     public static void main(String[] args) throws IOException {
         // read in input image matrix
         DataInputStream imageFile = new DataInputStream(new FileInputStream(
-                "conv1.output.dat"));
-        int channelNum = 1;
-        int inputHeight = 32;
-        int inputWidth = 32;
+                "conv4.output.dat"));
+        int channelNum = 128;
+        int inputHeight = 4;
+        int inputWidth = 4;
         double[][][] image = new double[channelNum][inputHeight][inputWidth];
 
         for (int i = 0; i < channelNum; i++)
@@ -46,7 +46,7 @@ public class NPUmodel {
             }
         imageFile.close();
 
-        for (int i = 0; i < channelNum; i++)
+        for (int i = 0; i < 1; i++)
             for (int j = 0; j < inputHeight; j++) {
                 for (int k = 0; k < inputWidth; k++) {
                     StdOut.printf("%8.1f", image[i][j][k]);
