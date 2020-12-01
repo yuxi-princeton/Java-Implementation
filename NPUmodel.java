@@ -30,13 +30,41 @@ public class NPUmodel {
     // }
 
     public static void main(String[] args) throws IOException {
-        // read in input image matrix
+        // read in input image matrix (uncomment to see result)
+
+
+        // reference answer for convolution layer 1
         DataInputStream imageFile = new DataInputStream(new FileInputStream(
-                "conv4.output.dat"));
-        int channelNum = 128;
-        int inputHeight = 4;
-        int inputWidth = 4;
+                "conv1.output.dat"));
+        int channelNum = 32;
+        int inputHeight = 32;
+        int inputWidth = 32;
         double[][][] image = new double[channelNum][inputHeight][inputWidth];
+
+
+        // // reference answer for convolution layer 2
+        // DataInputStream imageFile = new DataInputStream(new FileInputStream(
+        //         "conv2.output.dat"));
+        // int channelNum = 64;
+        // int inputHeight = 16;
+        // int inputWidth = 16;
+        // double[][][] image = new double[channelNum][inputHeight][inputWidth];
+
+        // // reference answer for convolution layer 3
+        // DataInputStream imageFile = new DataInputStream(new FileInputStream(
+        //         "conv3.output.dat"));
+        // int channelNum = 64;
+        // int inputHeight = 8;
+        // int inputWidth = 8;
+        // double[][][] image = new double[channelNum][inputHeight][inputWidth];
+
+        // // reference answer for convolution layer 4
+        // DataInputStream imageFile = new DataInputStream(new FileInputStream(
+        //         "conv4.output.dat"));
+        // int channelNum = 128;
+        // int inputHeight = 4;
+        // int inputWidth = 4;
+        // double[][][] image = new double[channelNum][inputHeight][inputWidth];
 
         for (int i = 0; i < channelNum; i++)
             for (int j = 0; j < inputHeight; j++) {
